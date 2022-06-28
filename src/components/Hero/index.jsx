@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import Video from '../../videos/video.mp4'
-import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './HeroElements'
+import "./Hero.css"
+import { HeroContainer, HeroBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './HeroElements'
 import { Button } from '../ButtonElements'
 
 const Hero = () => {
@@ -13,11 +13,11 @@ const Hero = () => {
   return (
     <HeroContainer id='home'>
       <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
+        <div className='animated--background'></div>
       </HeroBg>
       <HeroContent>
-        <HeroH1> Virtual Banking Make Easy</HeroH1>
-        <HeroP>Sign up for a new accoun today and recive $250 in credit towards your next payment</HeroP>
+        <HeroH1> Transactions Made Easy</HeroH1>
+        <HeroP>The way money moves is rapidly evolving. Swivel helps you keep your financial institution ready at every turn.</HeroP>
         <HeroBtnWrapper>
           <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'               smooth={true} duration={500} spy={true} exact='true' offset={-80}>
             Get Started {hover ? <ArrowForward /> : <ArrowRight/>}

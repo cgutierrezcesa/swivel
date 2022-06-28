@@ -1,8 +1,13 @@
 import React, {useState, useEffect} from 'react'
+import whiteLogo from './swivel-white.png';
 import { FaBars } from 'react-icons/fa'
 import {IconContext} from 'react-icons/lib'
-import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavLinks, NavItem, NavBtn, NavBtnLink } from './NavbarElements'
+import { Nav, NavbarContainer, MobileIcon, NavMenu, NavLinks, NavItem, NavBtn, NavBtnLink } from './NavbarElements'
 import { animateScroll as scroll } from 'react-scroll';
+import "animate.css";
+import "./Navbar.css";
+
+
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false)
@@ -27,7 +32,7 @@ const Navbar = ({ toggle }) => {
     <IconContext.Provider value={{ color: '#fff'}}>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to='/' onClick={toggleHome}>dolla</NavLogo>
+        <img src={whiteLogo} alt="-logo" className="white--logo animate__animated animate__fadeInUp"></img>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>

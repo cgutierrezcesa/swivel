@@ -1,15 +1,19 @@
 import React from 'react'
-import { Container, FormWrap, Icon, FormContent, Form, FormInput, FormH1, FormLabel, FormButton, Text } from './SigninElements'
+import { Container, FormWrap, FormContent, Form, FormInput, FormH1, FormLabel, FormButton, Text } from './SigninElements'
+import LogoSignIn from './swivel-white.png';
+import "./coloredLogo.css"
+
 
 const SignIn = () => {
   return (
     <>
       <Container>
         <FormWrap>
-          <Icon to='/'>dolla</Icon>
+   
           <FormContent>
             <Form action='#'>
-              <FormH1>Sign in to your account</FormH1>
+            <img src={LogoSignIn} alt="-logo" className="signin--logo animate__animated animate__fadeInUp"></img>
+
               <FormLabel htmlFor='for'>Email</FormLabel>
                 <FormInput htmlFor='email' required />
               <FormLabel htmlFor='for'>Password</FormLabel>

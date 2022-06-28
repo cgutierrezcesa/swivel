@@ -77,7 +77,7 @@ export const NavLinks = styled(LinkS)`
   cursor: pointer;
 
   &.active {
-    border-bottom: 3px solid #01bf71
+    border-bottom: 3px solid #d62eb8
   }
 `
 export const NavBtn = styled.nav`
@@ -90,13 +90,13 @@ export const NavBtn = styled.nav`
 `
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #01bf71;
+  border: 2px solid #fff;
+  background: #ffffff00;
   white-space: nowrap;
   padding: 10px 22px;
-  color: #010606;
+  color: white;
   font-size: 16px;
   outline: none;
-  border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;

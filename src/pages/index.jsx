@@ -6,6 +6,7 @@ import { homeObjOne, homeObjTwo, homeObjThree} from '../components/Info/Data';
 import Navbar from '../components/Navbar'
 import Services from '../components/Services';
 import Sidebar from '../components/SideBar'
+import Chat from '../components/Chat';
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,6 +24,7 @@ const Home = () => {
       <Info {...homeObjTwo}/>
       <Services />
       <Info {...homeObjThree}/>
+      <Chat />
       <Footer />
     </>
   )

@@ -1,7 +1,9 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
-import { FooterContainer, FooterWrap, FooterLinkWrapper, FooterLinkItems, FooterLinkContainer, FooterLinkTitle, FooterLink, SocialIconLink, SocialIcons, SocialLogo, SocialMedia, SocialMediaWrap, WebsiteRights } from './FooterElements'
+import { FooterContainer, FooterWrap, FooterLinkWrapper, FooterLinkItems, FooterLinkContainer, FooterLinkTitle, FooterLink, SocialIconLink, SocialIcons, SocialMedia, SocialMediaWrap } from './FooterElements'
 import { animateScroll as scroll } from 'react-scroll';
+import whiteLogoFooter from './swivel-white.png';
+
 
 const Footer = () => {
   const toggleHome = () => {
@@ -31,7 +33,7 @@ const Footer = () => {
           </FooterLinkWrapper>
 
           <FooterLinkWrapper>
-            <FooterLinkItems>
+            <FooterLinkItems style={{display: "none"}}>
               <FooterLinkTitle>Videos</FooterLinkTitle>
                 <FooterLink to='/'>Submit Video</FooterLink>
                 <FooterLink to='/'>Ambassadors</FooterLink>
@@ -49,24 +51,22 @@ const Footer = () => {
         </FooterLinkContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to='/' onClick={toggleHome}>
-              dolla
-            </SocialLogo>
-            <WebsiteRights>dolla © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
+          <img src={whiteLogoFooter} alt="-logo" className="white--logo animate__animated animate__fadeInUp"></img>
+          
             <SocialIcons>
               <SocialIconLink href='/' target='_blank' arial-label='Facebook'>
                 <FaFacebook />
               </SocialIconLink>
-              <SocialIconLink href='//www.instagram.com/leonardtcomdt/' target='_blank' arial-label='Instagram'>
+              <SocialIconLink target='_blank' arial-label='Instagram'>
                 <FaInstagram/>
               </SocialIconLink>
-              <SocialIconLink href='//www.youtube.com/channel/UCF6Cz50AqAJcg6JC5LDRElg/videos?view_as=subscriber' target='_blank' arial-label='Youtube'>
+              <SocialIconLink target='_blank' arial-label='Youtube'>
                 <FaYoutube />
               </SocialIconLink>
               <SocialIconLink href='/' target='_blank' arial-label='Twitter'>
                 <FaTwitter/>
               </SocialIconLink>
-              <SocialIconLink href='//www.linkedin.com/in/leonardtlauenstein/' target='_blank' arial-label='Linkedin'>
+              <SocialIconLink href='https://www.linkedin.com/company/getswivel/mycompany/' target='_blank' arial-label='Linkedin'>
                 <FaLinkedin />
               </SocialIconLink>
             </SocialIcons>
