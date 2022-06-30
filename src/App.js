@@ -6,18 +6,24 @@ import SigninPage from './pages/signin';
 import Express from './pages/expressCheckout';
 
 
+
 function App() {
+
   return (
     <Router>
       <Switch>
+   
+
         <Route path='/' component={Home} exact />
         <Route path='/SWBC' component={SWBC} exact />
-        <Route path='/signin' component={SigninPage} exact />
-        <Route path='/express' component={Express} exact />
+
+       <Route path='/signin' component={SigninPage} exact /> 
+        <Route path='/express' component={Express} exact /> 
+
 
       </Switch>
     </Router>
   );
 }
 
-export default App;
+export default App; 

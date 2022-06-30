@@ -7,13 +7,23 @@ import Navbar from '../components/Navbar'
 import Services from '../components/Services';
 import Sidebar from '../components/SideBar'
 import Chat from '../components/Chat';
+import { useFlags} from 'launchdarkly-react-client-sdk';
+
+
+
 
 const Home = () => {
+
+  const {chat} = useFlags()
+
+
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () =>{
     setIsOpen(!isOpen);
   }
+
+    
 
   return (
     <>
@@ -24,10 +34,11 @@ const Home = () => {
       <Info {...homeObjTwo}/>
       <Services />
       <Info {...homeObjThree}/>
-      <Chat />
+     {chat ? <Chat /> : <null /> }
       <Footer />
     </>
   )
 }
 
-export default Home
+
+export default Home; 
