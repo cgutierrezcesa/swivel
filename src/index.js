@@ -1,13 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AppSWBC from './AppSWBC';
 import App from './App';
-import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
+
+import { useFlags, asyncWithLDProvider } from "launchdarkly-react-client-sdk";
 import { deviceType, osName } from "react-device-detect";
 import getUserId from './utils/getUserId';
 
 let id = getUserId();
 
+function MainContent(){
+  const {masterswitch} = useFlags()
+
+
+  return(
+    <div>
+       {masterswitch ? <AppSWBC /> : <App /> }
+    </div>
+  
+  
+  );
+}
+
 (async () => {
+ 
   const LDProvider = await asyncWithLDProvider({
     clientSideID: '62bb8b40b288aa15948d600c',
     user: {
@@ -21,8 +37,9 @@ let id = getUserId();
   );
 
 ReactDOM.render(
+  
   <LDProvider>
-    <App />
+   <MainContent /> 
   </LDProvider>,
 
   document.getElementById('root')

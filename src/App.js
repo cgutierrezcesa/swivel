@@ -4,22 +4,21 @@ import Home from './pages/index';
 import SWBC from './pages/indexSWBC';
 import SigninPage from './pages/signin';
 import Express from './pages/expressCheckout';
+import { useFlags} from 'launchdarkly-react-client-sdk';
 
 
 
 function App() {
 
+    const {routeChange} = useFlags()
+
   return (
     <Router>
       <Switch>
-   
 
         <Route path='/' component={Home} exact />
-        <Route path='/SWBC' component={SWBC} exact />
 
-       <Route path='/signin' component={SigninPage} exact /> 
-        <Route path='/express' component={Express} exact /> 
-
+        {routeChange ? <Route path='/checkout' component={SigninPage} exact /> : <Route path='/checkout' component={Express} exact />  }
 
       </Switch>
     </Router>

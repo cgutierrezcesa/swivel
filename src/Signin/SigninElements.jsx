@@ -10,7 +10,24 @@ export const Container = styled.div`
   top: 0;
   z-index: 0;
   overflow: hidden;
-  background: white;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
     
   );
 `
@@ -56,7 +73,7 @@ export const Form = styled.form`
   display: grid;
   margin: 0 auto;
   padding: 80px 32px;
-  border-radius:4px;
+  border-radius:50px;
   box-shadow: 0 1px 3px rgba( 0, 0, 0, 0.9);
   
   @media screen and (max-width: 480px) {
@@ -78,10 +95,10 @@ export const FormLabel = styled.label`
 export const FormInput = styled.input`
   padding: 16px 16px;
   margin-bottom: 32px;
-  border-radius: 4px;
+  border-radius: 20px;
 `
 export const FormButton = styled.button`
-  background: #d62eb8;
+  background: #2c5ee6;
   padding: 16px 0;
   border: none;
   border-radius: 4px;
