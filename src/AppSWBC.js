@@ -2,8 +2,8 @@ import React from 'react'
 import {BrowserRouter as Router, Switch, Route} from  'react-router-dom'
 import Contact from './SWBC/routes/Contact';
 import Home from './SWBC/routes/Home'
-import Careers from './SWBC/routes/Pricing'
-import Services from './SWBC/routes/Training';
+import Careers from './SWBC/routes/Careers'
+import Services from './SWBC/routes/Services';
 import './SWBC/index.css';
 
 function AppSWBC() {

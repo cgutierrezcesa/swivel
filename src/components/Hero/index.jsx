@@ -21,7 +21,7 @@ const Hero = () => {
       <HeroBg>
         <div className='animated--background'></div>
       </HeroBg>
-      <HeroContent>
+      <HeroContent className='animate__animated animate__slideInUp'>
        <HeroH1> Transactions Made Easy</HeroH1> 
         <HeroP>The way money moves is rapidly evolving. Swivel helps you keep your financial institution ready at every turn.</HeroP>
         <HeroBtnWrapper>

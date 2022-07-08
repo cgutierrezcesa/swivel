@@ -5,6 +5,8 @@
     position: relative;
 }
 
+
+
 .hero-img:before {
     content:'';
     background: url('../assets/heroImg.jpg') no-repeat center center/cover;

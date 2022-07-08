@@ -10,12 +10,13 @@ import getUserId from './utils/getUserId';
 let id = getUserId();
 
 function MainContent(){
-  const {masterswitch} = useFlags()
+
+  const {swbcpagechange} = useFlags();
 
 
   return(
     <div>
-       {masterswitch ? <AppSWBC /> : <App /> }
+       {swbcpagechange ? <AppSWBC /> : <App /> }
     </div>
   
   

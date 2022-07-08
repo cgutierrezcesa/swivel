@@ -3,6 +3,7 @@ import Logo from './swbc--logo.png'
 import {Link} from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import './NavbarStyles.css'
+import "animate.css";
 
 const Navbar = () => {
     const[click, setClick] = useState(false)
@@ -20,22 +21,22 @@ const Navbar = () => {
         window.addEventListener('scroll', changeColor)
 
     return (
-        <div className={color ? 'header header-bg' : 'header'}>
-            <div className='center--'>
+        <div className={color ? 'header header-bg animate__animated animate__fadeIn' : 'header animate__animated animate__fadeIn'} >
+           
            <Link to='/'>  <img src={Logo} alt="-logo" className="logo--SWBC"></img></Link> 
-           </div>
+         
            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                <li>
-                   <Link to='/'>Home</Link>
+                   <Link className="h--"to='/'>Home</Link>
                </li>
                <li>
-                   <Link to='/pricing'>Careers</Link>
+                   <Link className="h--" to='/careers'>Careers</Link>
                </li>
                <li>
-                   <Link to='/training'>Services</Link>
+                   <Link className="h--" to='/services'>Services</Link>
                </li>
                <li>
-                   <Link to='/contact'>Contact</Link>
+                   <Link className="h--" to='/contact'>Contact</Link>
                </li>
            </ul>
            <div className='hamburger' onClick={handleClick}>

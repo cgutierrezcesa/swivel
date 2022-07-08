@@ -29,10 +29,10 @@ const Navbar = ({ toggle }) => {
 
   return (
     <>
-    <IconContext.Provider value={{ color: '#fff'}}>
+    <IconContext.Provider value={{ color: '#fff'}}> 
       <Nav scrollNav={scrollNav}>
-        <NavbarContainer>
-        <img src={whiteLogo} alt="-logo" className="white--logo animate__animated animate__fadeInUp"></img>
+        <NavbarContainer className="animate__animated animate__slideInDown">
+        <img src={whiteLogo} alt="-logo" className="white--logo "></img>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
