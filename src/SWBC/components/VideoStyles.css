@@ -55,6 +55,11 @@
         margin-bottom: 1.6rem;
     }
 }
+@media screen and (max-width:410px) {
+    .hero .content{
+        top: 20vh;
+    }
+}
 
 
 
